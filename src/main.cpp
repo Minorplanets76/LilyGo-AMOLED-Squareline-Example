@@ -1,10 +1,12 @@
 /**
  * Minimal Test case C.Chad 2024
  */
+
 #include <LilyGo_AMOLED.h>
 #include <LV_Helper.h>
 
 #include <AceButton.h>
+#include "eez-framework.h"
 #include "ui/ui.h"
 
 using namespace ace_button;
