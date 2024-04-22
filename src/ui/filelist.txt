@@ -10,7 +10,7 @@ components/ui_comp_hook.c
 ui_helpers.c
 ui_events.c
 images/ui_img_sheep_png.c
-images/ui_img_arrow_back_fill0_wght500_grad0_opsz48_png.c
+images/ui_img_1420163004.c
 images/ui_img_contactless_fill0_wght500_grad0_opsz48_png.c
 images/ui_img_contactless_off_fill0_wght500_grad0_opsz48_png.c
 images/ui_img_sd_card_alert_fill0_wght500_grad0_opsz48_png.c
@@ -18,3 +18,4 @@ images/ui_img_wifi_off_png.c
 images/ui_img_bluetooth_connected_png.c
 images/ui_img_battery_charging_20_png.c
 images/ui_img_wifi_tethering_png.c
+images/ui_img_arrow_back_fill0_wght500_grad0_opsz48_png.c

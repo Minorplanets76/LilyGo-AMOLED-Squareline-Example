@@ -27,6 +27,7 @@ lv_obj_t * ui_Label9;
 
 // SCREEN: ui_Scan
 void ui_Scan_screen_init(void);
+void ui_event_Scan(lv_event_t * e);
 lv_obj_t * ui_Scan;
 lv_obj_t * ui_Label3;
 lv_obj_t * ui_Scan_Image1;
@@ -48,7 +49,6 @@ lv_obj_t * ui_Back;
 void ui_Setup_screen_init(void);
 lv_obj_t * ui_Setup;
 lv_obj_t * ui_Test_Button2;
-lv_obj_t * ui_RFIDScanner;
 lv_obj_t * ui_Test_Dropdown1;
 lv_obj_t * ui_Test_Switch1;
 lv_obj_t * ui_Test_Panel1;
@@ -62,6 +62,7 @@ lv_obj_t * ui_Battery;
 lv_obj_t * ui_WiFIAP;
 void ui_event_Back1(lv_event_t * e);
 lv_obj_t * ui_Back1;
+lv_obj_t * ui_Test_Switch2;
 
 
 // SCREEN: ui_Test1
@@ -143,6 +144,15 @@ void ui_event_Button6(lv_event_t * e)
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_CLICKED) {
         _ui_screen_change(&ui_Setup, LV_SCR_LOAD_ANIM_FADE_ON, 200, 0, &ui_Setup_screen_init);
+    }
+}
+void ui_event_Scan(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
+        lv_indev_wait_release(lv_indev_get_act());
+        _ui_screen_change(&ui_Main, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 500, 0, &ui_Main_screen_init);
     }
 }
 void ui_event_Scan_Button2(lv_event_t * e)

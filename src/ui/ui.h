@@ -43,6 +43,7 @@ extern lv_obj_t * ui_Button6;
 extern lv_obj_t * ui_Label9;
 // SCREEN: ui_Scan
 void ui_Scan_screen_init(void);
+void ui_event_Scan(lv_event_t * e);
 extern lv_obj_t * ui_Scan;
 extern lv_obj_t * ui_Label3;
 extern lv_obj_t * ui_Scan_Image1;
@@ -60,7 +61,6 @@ extern lv_obj_t * ui_Back;
 void ui_Setup_screen_init(void);
 extern lv_obj_t * ui_Setup;
 extern lv_obj_t * ui_Test_Button2;
-extern lv_obj_t * ui_RFIDScanner;
 extern lv_obj_t * ui_Test_Dropdown1;
 extern lv_obj_t * ui_Test_Switch1;
 extern lv_obj_t * ui_Test_Panel1;
@@ -74,6 +74,7 @@ extern lv_obj_t * ui_Battery;
 extern lv_obj_t * ui_WiFIAP;
 void ui_event_Back1(lv_event_t * e);
 extern lv_obj_t * ui_Back1;
+extern lv_obj_t * ui_Test_Switch2;
 // SCREEN: ui_Test1
 void ui_Test1_screen_init(void);
 extern lv_obj_t * ui_Test1;
@@ -85,7 +86,7 @@ extern lv_obj_t * ui____initial_actions0;
 
 
 LV_IMG_DECLARE(ui_img_sheep_png);    // assets/sheep.png
-LV_IMG_DECLARE(ui_img_arrow_back_fill0_wght500_grad0_opsz48_png);    // assets/arrow_back_FILL0_wght500_GRAD0_opsz48.png
+LV_IMG_DECLARE(ui_img_1420163004);    // assets/arrow (3).png
 LV_IMG_DECLARE(
     ui_img_contactless_fill0_wght500_grad0_opsz48_png);    // assets/contactless_FILL0_wght500_GRAD0_opsz48.png
 LV_IMG_DECLARE(
@@ -96,6 +97,7 @@ LV_IMG_DECLARE(ui_img_wifi_off_png);    // assets/wifi_off.png
 LV_IMG_DECLARE(ui_img_bluetooth_connected_png);    // assets/bluetooth_connected.png
 LV_IMG_DECLARE(ui_img_battery_charging_20_png);    // assets/battery_charging_20.png
 LV_IMG_DECLARE(ui_img_wifi_tethering_png);    // assets/wifi_tethering.png
+LV_IMG_DECLARE(ui_img_arrow_back_fill0_wght500_grad0_opsz48_png);    // assets/arrow_back_FILL0_wght500_GRAD0_opsz48.png
 
 
 

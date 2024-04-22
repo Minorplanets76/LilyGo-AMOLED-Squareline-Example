@@ -8,7 +8,7 @@
 void ui_Scan_screen_init(void)
 {
     ui_Scan = lv_obj_create(NULL);
-    lv_obj_clear_flag(ui_Scan, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_clear_flag(ui_Scan, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
     ui_Label3 = lv_label_create(ui_Scan);
     lv_obj_set_width(ui_Label3, LV_SIZE_CONTENT);   /// 1
@@ -31,22 +31,23 @@ void ui_Scan_screen_init(void)
     lv_img_set_zoom(ui_Scan_Image1, 100);
 
     ui_Scan_Button2 = lv_btn_create(ui_Scan);
-    lv_obj_set_width(ui_Scan_Button2, 80);
-    lv_obj_set_height(ui_Scan_Button2, 80);
+    lv_obj_set_width(ui_Scan_Button2, 120);
+    lv_obj_set_height(ui_Scan_Button2, 120);
     lv_obj_set_x(ui_Scan_Button2, -5);
     lv_obj_set_y(ui_Scan_Button2, -5);
     lv_obj_set_align(ui_Scan_Button2, LV_ALIGN_BOTTOM_RIGHT);
     lv_obj_add_flag(ui_Scan_Button2, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_clear_flag(ui_Scan_Button2, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_Scan_Button2, 30, LV_PART_MAIN | LV_STATE_DEFAULT);
     ui_object_set_themeable_style_property(ui_Scan_Button2, LV_PART_MAIN | LV_STATE_DEFAULT, LV_STYLE_BG_COLOR,
-                                           _ui_theme_color_Grey);
+                                           _ui_theme_color_Blue);
     ui_object_set_themeable_style_property(ui_Scan_Button2, LV_PART_MAIN | LV_STATE_DEFAULT, LV_STYLE_BG_OPA,
-                                           _ui_theme_alpha_Grey);
-    lv_obj_set_style_bg_grad_color(ui_Scan_Button2, lv_color_hex(0x8F8F8F), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui_Scan_Button2, LV_GRAD_DIR_VER, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_img_src(ui_Scan_Button2, &ui_img_arrow_back_fill0_wght500_grad0_opsz48_png,
-                                LV_PART_MAIN | LV_STATE_DEFAULT);
+                                           _ui_theme_alpha_Blue);
+    lv_obj_set_style_bg_img_src(ui_Scan_Button2, &ui_img_1420163004, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_img_recolor(ui_Scan_Button2, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_img_recolor_opa(ui_Scan_Button2, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_add_event_cb(ui_Scan_Button2, ui_event_Scan_Button2, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_Scan, ui_event_Scan, LV_EVENT_ALL, NULL);
 
 }

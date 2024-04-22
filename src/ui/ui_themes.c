@@ -8,6 +8,9 @@
 
 const ui_theme_variable_t _ui_theme_color_Grey[1] = {0x676767};
 const ui_theme_variable_t _ui_theme_alpha_Grey[1] = {255};
+
+const ui_theme_variable_t _ui_theme_color_Blue[1] = {0x4190FD};
+const ui_theme_variable_t _ui_theme_alpha_Blue[1] = {255};
 uint8_t ui_theme_idx = UI_THEME_DEFAULT;
 
 
